@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Faster+One&display=swap');
+
+/* ----------------------- Reset ----------------------- */
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----------------------- Root ----------------------- */
+
+:root{
+    --Sky_blue: #DFFDFF;
+    --black: #0000;
+    --White: #FFFF;
+    --Dark_blue: #416788;
+    --BlueBlue: #085E8F;
+    --lightblack:#30343F;
+
+    --FontNoto:'Noto Sans', sans-serif;
+    --FontMont:'Montserrat', sans-serif; 
+    --FontFasterOne: 'Faster One', cursive;
+    --light: 300;
+    --SemiBold: 600;
+    --Bold: 800; 
+}
+
+body{
+    background: var(--Dark_blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    padding: 5rem 2rem;
+    overflow: hidden;
+}
+
+header{
+    margin-bottom: 4rem;
+}
+
+section{
+    background: var(--Sky_blue);
+    padding: 4rem;
+    width: 100%;
+    border-radius: 25px;
+    border: var(--lightblack) solid 5px;
+    transform: translateY(-500px);
+    opacity: 0;
+    animation: Elias forwards 1s ease-in;
+}
+
+section h1{
+    font-family: var(--FontMont);
+    font-weight: 600;
+    font-size: 4rem;
+    margin-bottom: 0.3rem;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid var(--Sky_blue);
+    white-space: nowrap; 
+    width: 0;
+    letter-spacing: 0.4rem;
+    animation: typing 2s 0.7s forwards steps(40, end), blink-caret 1s step-end infinite;
+}
+
+section p{
+    font-family: var(--FontMont);
+    font-weight: 600;
+    font-size: 3rem;
+    color: var(--lightblack);
+    margin-bottom: 0.3rem;
+    opacity: 0;
+    transform: translateX(-1000px);
+    animation: slideIn 1s 3s forwards;
+}
+
+section p span{
+    color: var(--BlueBlue);
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+button{
+    background-color: transparent;
+    border: solid var(--Sky_blue) 3px;
+    border-radius: 15px;
+    padding: 1.8rem 5rem;
+    color: var(--Sky_blue);
+    font-size: 2rem;
+    font-family: var(--FontNoto);
+    font-weight: 600;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(1000px);
+    animation: fade-up 1s 4s forwards ease-in;
+    transition: 0.3s ease-in;
+}
+
+button:hover{
+    color: var(--White);
+    background-color: var(--BlueBlue);
+    box-shadow: var(--Sky_blue) 1px 1px 15px;
+}
+
+/* ----------------------- Animation ----------------------- */
+
+@keyframes Elias{
+    0%{
+        opacity: 0;
+        transform: translateY(-500px);
+    }
+    50%{
+        
+        transform: translateY(0px);
+    }
+    70%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translateY(0px); 
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0%{
+        transform: translateX(-1000px);
+        opacity: 0;
+    }   
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    } 
+}
+
+/* TypeWritter anime */
+
+@keyframes typing {
+    from { width: 0}
+    to { width: 73%;}
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--BlueBlue)}
+}
+
+@keyframes fade-up{
+    0%{
+        transform: translateY(1000px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(0px); 
+    }
+    70%{
+        transform: translateY(50px);
+    } 
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
