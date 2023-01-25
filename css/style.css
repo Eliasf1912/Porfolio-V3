@@ -30,16 +30,23 @@
 
 body{
     background: var(--Dark_blue);
+    width: 100vw;
+    height: 100vh;
     display: flex;
+    overflow: hidden;
     align-items: center;
     justify-content: center;
     flex-flow: column nowrap;
-    padding: 5rem 2rem;
-    overflow: hidden;
+    padding: 4em;
 }
 
 header{
     margin-bottom: 4rem;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 section{
@@ -55,15 +62,14 @@ section{
 
 section h1{
     font-family: var(--FontMont);
-    font-weight: 600;
-    font-size: 4rem;
-    margin-bottom: 0.3rem;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid var(--Sky_blue);
-    white-space: nowrap; 
+    font-weight: 800;
+    font-size: 5rem;
+    margin-bottom: 1rem;
     width: 0;
-    letter-spacing: 0.4rem;
-    animation: typing 2s 0.7s forwards steps(40, end), blink-caret 1s step-end infinite;
+    overflow: hidden;
+    border-right: .15em solid var(--BlueBlue);
+    white-space: nowrap; 
+    animation: typing 2s 0.7s forwards steps(40, end);
 }
 
 section p{
@@ -96,7 +102,7 @@ button{
     opacity: 0;
     transform: translateY(1000px);
     animation: fade-up 1s 4s forwards ease-in;
-    transition: 0.3s ease-in;
+    transition: 0.3s ease-in; 
 }
 
 button:hover{
@@ -140,12 +146,7 @@ button:hover{
 
 @keyframes typing {
     from { width: 0}
-    to { width: 73%;}
-}
-
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: var(--BlueBlue)}
+    to { width: 83.5%;}
 }
 
 @keyframes fade-up{
@@ -162,5 +163,111 @@ button:hover{
     100%{
         opacity: 1;
         transform: translateY(0px);
+    }
+}
+
+@keyframes slideOut{
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(1200px);  
+    }
+} 
+
+
+/* --------------- QUERIES --------------- */
+
+@media screen and (max-width: 1500px) {
+    body{
+        overflow: initial;
+    }
+    section h1{
+        font-size: 5em;
+        font-weight: 800;
+    }
+    section p{
+        font-size: 3em;
+    }  
+    section p span{
+        font-size: 1em;
+    }
+    button{
+        padding: 1em 2em;
+        font-size: 2em;
+    }
+    @keyframes typing {
+        from { width: 0}
+        to { width: 95%;}
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    body{
+        overflow: initial;
+    }
+    section h1{
+        font-size: 3.5em;
+        font-weight: 800;
+        animation: none;
+        width: fit-content;
+        overflow: initial;
+        border-right: none;
+        white-space: normal; 
+    }
+    section p{
+        font-size: 3em;
+    }  
+    section p span{
+        font-size: 1em;
+    }
+    button{
+        padding: 1em 2em;
+        font-size: 2em;
+    }
+    @keyframes typing {
+        from { width: 0}
+        to { width: 86%;}
+    }
+}
+
+@media screen and (max-width: 900px) {
+    body{
+        overflow: initial;
+    }
+    section h1{
+        font-size: 3em;
+        font-weight: 800;
+        opacity: 1;
+    }
+    section p{
+        font-size: 2em;
+    }  
+    section p span{
+        font-size: 1em;
+    }
+    button{
+        padding: 1em 2em;
+        font-size: 2em;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 700px) {
+    body{
+        overflow: initial;
+    }
+    section h1{
+        font-size: 2em;
+        font-weight: 800;
+    }
+    section p{
+        font-size: 1.5em;
+    }  
+    section p span{
+        font-size: 1em;
+    }
+    button{
+        padding: 0.5em 1em;
+        font-size: 1.8em;
     }
 }
