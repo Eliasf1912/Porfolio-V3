@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Faster+One&display=swap');
+
+/* ----------------------- Reset ----------------------- */
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----------------------- Root ----------------------- */
+
+:root{
+    --Sky_blue: #DFFDFF;
+    --black: #0000;
+    --White: #FFFF;
+    --Dark_blue: #416788;
+    --BlueBlue: #085E8F;
+    --lightblack:#30343F;
+
+    --FontNoto:'Noto Sans', sans-serif;
+    --FontMont:'Montserrat', sans-serif; 
+    --FontFasterOne: 'Faster One', cursive;
+    --light: 300;
+    --SemiBold: 600;
+    --Bold: 800; 
+}
+
+#canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+section{
+    background-color: rgba(222, 28, 28, 0.199);
+    color: #DFFDFF;
+    margin: 5rem;
+    padding: 4rem;
+}
