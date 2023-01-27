@@ -19,14 +19,16 @@
     --Dark_blue: #416788;
     --BlueBlue: #085E8F;
     --lightblack:#30343F;
+    --orange: orange;
+    --yellow: yellow;
+    --blue: rgb(67, 67, 227);
 
     --FontNoto:'Noto Sans', sans-serif;
     --FontMont:'Montserrat', sans-serif; 
     --FontFasterOne: 'Faster One', cursive;
-    --light: 300;
-    --SemiBold: 600;
-    --Bold: 800; 
 }
+
+/* ------------------------ Scene Three.js ------------------------ */ 
 
 #canvas{
     position: fixed;
@@ -37,9 +39,187 @@
     z-index: -1;
 }
 
-section{
-    background-color: rgba(222, 28, 28, 0.199);
-    color: #DFFDFF;
-    margin: 5rem;
-    padding: 4rem;
+/* ------------------------ About page style ------------------------ */ 
+
+.About{
+    background-color: rgba(222, 28, 28, 0);
+    margin: 4rem;
+    padding: 4rem 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    position: relative;
+}
+
+.About h2{
+    font-size: 3em;
+    font-family: var(--FontFasterOne);
+    letter-spacing: 0.8rem;
+    margin-bottom: 2rem;
+    font-weight: 800;
+    position: relative;
+    color: var(--White);
+}
+
+.About h2::before{
+    content: "";
+    background-color: var(--White);
+    width: 170%;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    right: 120%;
+}
+
+.About h2::after{
+    content: "";
+    background-color: var(--White);
+    width: 170%;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    left: 110%;
+}
+
+.About p{
+    color: var(--White);
+    text-align: start;
+    font-size: 2em;
+    font-family: var(--FontNoto);
+    font-weight: 300;
+}
+
+.About h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    font-family: var(--FontNoto);
+    font-size: 2.2em;
+    font-weight: 600;
+    margin: 6rem 0 4rem 0;
+    color: var(--White);
+}
+
+.logo{
+    margin-right: 1rem;
+    font-size: 1.5em;
+}
+
+/* ------------------------ Education part ------------------------ */ 
+
+.About article{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    padding: 0.5rem 2rem;
+}
+
+.About article:nth-child(5){
+    border-left: 8px solid var(--Sky_blue);
+    align-self: flex-start;
+    margin-bottom: 8rem;
+}
+
+.About article:nth-child(6){
+    border-right: 8px solid var(--Sky_blue);
+    align-items: flex-end;
+    align-self: flex-end;
+}
+
+
+.About article h4{
+    font-size: 1.7em;
+    font-weight: 600;
+    font-family: var(--FontMont);
+    color: var(--White);
+    margin-bottom: 0.3rem;
+}
+
+.About article p{
+    font-family: var(--FontMont);
+    font-size: 1.5em;
+}
+
+/* ------------------------ skills part ------------------------ */ 
+
+.logo_tech{
+    font-size: 4em;
+    margin-right: 2rem;
+    animation: Rotate 5s infinite ease-in-out;
+}
+
+.About article:nth-child(8){
+    align-self: flex-end;
+}
+
+.About article:nth-child(9){
+    align-self: flex-start;
+}
+
+.About article:nth-child(10){
+    align-self: flex-end;
+}
+
+.art_tech{
+    display: flex;
+    flex-flow: row !important;
+    align-items: center;
+    color: var(--White);
+    font-family: var(--FontNoto);
+    font-weight: 300;
+    font-size: 1.8em;
+    margin-bottom: 4rem;
+}
+
+.yellow{
+    color: var(--yellow);
+    transform: rotate(0deg);
+}
+
+.orange{
+    color: var(--orange);
+    transform: rotate(0deg);
+}
+
+.blue{
+    color: var(--blue);
+    transform: rotate(0deg);
+}
+
+.art_tech h5{
+    font-weight: 300;
+}
+
+.art_tech h5 span{
+    font-weight: 600;
+}
+
+@keyframes Rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.close{
+    color: var(--White);
+    font-size: 4em;
+    position: fixed;
+    right: 5%;
+    top: 5%;
+    cursor: pointer;
+    transition: 00transform 1s ease;
+}
+
+.close:hover{
+    transform: scale(1.2);
+    color: var(--orange);
+}
+
+.hidden{
+    display: none;
 }

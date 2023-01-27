@@ -4,10 +4,10 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="robots" content="index"/>
         <meta name="keywords" content="Portfolio,Project,Space">
         <meta name="description" content="Creation of a Portfolio for a school project in HTML,CSS and JS">
         <title>Portfolio v3</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
         <link rel="stylesheet" href="./css/space.css">
         <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
         <!-- ------------------------  three js importmap ------------------------ -->
@@ -19,20 +19,108 @@
                 }
             }
         </script>
-        <script src="./script/space.js" type="module" defer></script>
     </head>
 
     <body>
-
+        
         <div id="canvas"></div>
 
-        <section class="About">
+        <header></header>
 
-            <h1>ABOUT</h1>
+        <main>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dolores impedit quia quod, pariatur error commodi ab quisquam harum facere magni, voluptatum a. Voluptatibus, architecto, doloribus explicabo asperiores dignissimos deserunt saepe mollitia harum magnam eaque at! Culpa, possimus iure quaerat tenetur, delectus saepe rem enim officiis minima quas, natus voluptas!</p>
+            <section class="About">
 
-        </section>
+                <i class="bi bi-x-circle close"></i>
+
+                <h2>ABOUT</h2>
+    
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dolores impedit quia quod, pariatur error commodi ab quisquam harum facere magni, voluptatum a. Voluptatibus, architecto, doloribus explicabo asperiores dignissimos deserunt saepe mollitia harum magnam eaque at! Culpa, possimus iure quaerat tenetur, delectus saepe rem enim officiis minima quas, natus voluptas!</p>
+    
+                <h3><i class="bi bi-compass logo"></i>Education</h3>
+    
+                <article>
+    
+                    <h4>Licence LLCER Anglais 2020-2021</h4>
+                    <p>Université Paris 8 - Seine-Saint-Denis</p>
+    
+                </article>
+    
+                <article>
+    
+                    <h4>Bachelor Développeur Web 2021-Actuel</h4>
+                    <p>l'Ecole Multimédia - Paris</p>
+    
+                </article>
+    
+                <h3><i class="bi bi-code-slash logo"></i>Technologies</h3>
+    
+                <article class="art_tech">
+    
+                    <i class="bi bi-filetype-html logo_tech orange"></i>
+                    <h5>{ NIVEAU: <span>Intérmédiaire;</span> }</h5>
+    
+                </article>
+    
+                <article class="art_tech" >
+    
+                    <i class="bi bi-filetype-css logo_tech blue"></i>
+                    <h5>{ NIVEAU: <span>Avancée;</span> }</h5>
+    
+                </article>
+    
+                <article class="art_tech ">
+                    
+                    <i class="bi bi-filetype-js logo_tech yellow"></i>
+                    <h5>{ NIVEAU: <span>Intérmédiaire;</span> }</h5>
+    
+                </article>
+    
+            </section>
+
+            <section class="Works">
+
+                <i class="bi bi-x-circle close"></i>
+
+                <h2>ABOUT</h2>
+
+                <div class="slider">
+
+                    <section class="Phaser">
+
+                        <img src="" alt="">
+
+                    </section>
+
+                    <section class="">
+
+                        <img src="" alt="">
+
+                    </section>
+                    
+                    <section class="">
+
+                        <img src="" alt="">
+
+                    </section>
+
+                </div>
+
+                <section class="Slider_info">
+
+                    
+
+                </section>
+
+            </section>
+
+        </main>
+
+        <footer></footer>
+
+
         
+
+        <script src="./script/space.js" type="module"></script>
     </body>
 </html>
