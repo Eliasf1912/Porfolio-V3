@@ -212,7 +212,7 @@
     right: 5%;
     top: 5%;
     cursor: pointer;
-    transition: 00transform 1s ease;
+    transition: transform 1s ease;
 }
 
 .close:hover{
@@ -222,4 +222,137 @@
 
 .hidden{
     display: none;
+}
+
+/* ------------------------------ Slider part ------------------------------ */
+
+.Works{
+    background-color: rgba(222, 28, 28, 0);
+    margin: 4rem;
+    padding: 4rem 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    position: relative;
+}
+
+.Works h2{
+    font-size: 3em;
+    font-family: var(--FontFasterOne);
+    letter-spacing: 0.8rem;
+    margin-bottom: 4rem;
+    font-weight: 800;
+    position: relative;
+    color: var(--White);
+}
+
+.Works h2::before{
+    content: "";
+    background-color: var(--White);
+    width: 110%;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    right: 120%;
+}
+
+.Works h2::after{
+    content: "";
+    background-color: var(--White);
+    width: 110%;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    left: 110%;
+}
+
+.slider{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: var(--orange);
+}
+
+.slider_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid black;
+    transform: translateX(-450px);
+    gap: 5rem;
+}
+
+.pannel{
+    display: flex;
+    width: 700px;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: solid 5px gray;
+}
+
+/* ------------------------------ Projects ------------------------------ */
+
+.Phaser{
+    background-image: url(/assets/phaserZ.jpg);
+    background-size: cover;
+}
+
+.run_game{
+    background-image: url(/assets/RunnergameZ.jpg);
+    background-size: cover;
+}
+
+.bootstrap{
+    background-image: url(/assets/bootsarp\ project.jpg);
+    background-size: cover; 
+}
+
+.Phaser,.run_game{
+    margin-right: 0rem;
+}
+
+.Phaser,.run_game,.bootstrap{
+    border: solid 5px red;
+    width: 400px;
+    height: 300px;
+    border-radius: 50%;
+} 
+
+/* Js classes */ 
+
+.active{
+    opacity: 1;
+    /* transform: scale(1.3); */
+    /* box-shadow: var(--White) 1px 1px 2px; */
+}
+
+/* btn du slider */
+
+.btn_left{
+    color: var(--White);
+    transform: rotate(-45deg);
+    font-size: 4em;
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    left: -15%;
+}
+
+.btn_right{
+    color: var(--White);
+    transform: rotate(45deg);
+    font-size: 4em;
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    right: -15%;
+}
+
+.btn_left:hover,.btn_right:hover{
+    color: var(--Sky_blue);
 }

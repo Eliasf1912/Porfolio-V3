@@ -31,7 +31,7 @@ console.log(canvas.appendChild(renderer.domElement))
 const ABOUT_GEO = new THREE.SphereGeometry(3, 32, 24);
 const ABOUT_MAT = new THREE.MeshBasicMaterial( { color: 0xF7231 } );
 const ABOUT = new THREE.Mesh(ABOUT_GEO, ABOUT_MAT);
-ABOUT.position.y = 1;
+ABOUT.position.y = 5;
 SCENE.add(ABOUT);
 console.log(ABOUT);
 
