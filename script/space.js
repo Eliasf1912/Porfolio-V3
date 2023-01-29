@@ -35,14 +35,25 @@ ABOUT.position.y = 5;
 SCENE.add(ABOUT);
 console.log(ABOUT);
 
+const objectG = new THREE.SphereGeometry(1, 32, 24);
+const objectM = new THREE.MeshBasicMaterial( { color: 0xDFFDFF } );
+
+// function Star(nombre,objectG,objectM){
+// 	let object;
+// 	for(let i = 0; i < nombre; i++){
+// 		object = new THREE.Mesh(objectG,objectM);
+// 		object.position.x = Math.floor(Math.random()*window.innerWidth)
+// 		object.position.y = Math.floor(Math.random()*5)
+// 		object.position.y = Math.floor(Math.random()-1000);
+// 		SCENE.add(object);
+// 	}
+// }
+
 // click pour acceder à cette page
 const raycaster = new THREE.Raycaster();
 const pointer = new THREE.Vector2();
 
-const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-const cube = new THREE.Mesh(geometry, material);
-SCENE.add( cube );
+// Star(200,objectG,objectM);
 
 console.log(SCENE.children);
 

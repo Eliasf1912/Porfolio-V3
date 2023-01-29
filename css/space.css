@@ -4,10 +4,13 @@
 
 /* ----------------------- Reset ----------------------- */
 
-*, *::after, *::before{
+*, *::after, *::before,*:visited{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
 }
 
 /* ----------------------- Root ----------------------- */
@@ -31,6 +34,7 @@
 /* ------------------------ Scene Three.js ------------------------ */ 
 
 #canvas{
+    overflow: hidden;
     position: fixed;
     top: 0;
     left: 0;
@@ -38,6 +42,40 @@
     height: 100vh;
     z-index: -1;
 }
+
+/* ------------------------ header page style ------------------------ */ 
+
+header{
+    width: 100%;
+    height: 100vh;
+    padding: 2rem;
+}
+
+nav{
+    padding: 1rem;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-flow: row nowrap;
+    gap: 3rem;
+    font-family: var(--FontMont);
+    font-weight: 600;
+    font-size: 1.4em;
+}
+
+nav ul li{
+    color: var(--White);
+    padding: 1rem;
+    transition: 0.2s ease-in;
+}
+
+nav ul li:hover{
+    color: var(--Dark_blue);
+}
+
 
 /* ------------------------ About page style ------------------------ */ 
 
@@ -517,4 +555,31 @@ input[type="submit"]:hover{
     cursor: pointer;
 }
 
+.contact_footer{
+    margin-top: 2rem;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
 
+.contact_footer article{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+.contact_footer article p{
+    color: var(--White);
+    font-family: var(--FontNoto);
+    font-size: 1.5em;
+}
+
+.contact_footer article i{
+    background-color: var(--White);
+    padding: 1rem;
+    font-size: 2em;
+    border-radius: 50%;
+}
