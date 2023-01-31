@@ -35,24 +35,42 @@
 
 #canvas{
     overflow: hidden;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     z-index: -1;
+}
+
+body{
+    background-color: black;
+    width: 100%;
 }
 
 /* ------------------------ header page style ------------------------ */ 
 
 header{
+    position: relative;
     width: 100%;
     height: 100vh;
-    padding: 2rem;
 }
 
 nav{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
     padding: 1rem;
+    /* border-bottom: solid 1px var(--White); */
+    box-shadow: var(--White) 0 1px 5px;
+}
+
+nav h1{
+    color: var(--White);
+    font-size: 2em;
+    font-family: var(--FontMont);
+    cursor: pointer;
 }
 
 nav ul{
@@ -94,7 +112,7 @@ nav ul li:hover{
     font-size: 3em;
     font-family: var(--FontFasterOne);
     letter-spacing: 0.8rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     font-weight: 800;
     position: relative;
     color: var(--White);
@@ -133,10 +151,10 @@ nav ul li:hover{
     align-items: center;
     justify-content: center;
     align-self: flex-start;
-    font-family: var(--FontNoto);
-    font-size: 2.2em;
-    font-weight: 600;
-    margin: 6rem 0 4rem 0;
+    font-family: var(--FontFasterOne);
+    font-size: 3em;
+    font-weight: 300;
+    margin: 6rem 0;
     color: var(--White);
 }
 
@@ -279,7 +297,7 @@ nav ul li:hover{
     font-size: 3em;
     font-family: var(--FontFasterOne);
     letter-spacing: 0.8rem;
-    margin-bottom: 4rem;
+    margin-bottom: 8rem;
     font-weight: 800;
     position: relative;
     color: var(--White);
@@ -318,6 +336,7 @@ nav ul li:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
     /* border: 3px solid black; */
     gap: 5rem;
 }
@@ -355,10 +374,16 @@ nav ul li:hover{
 
 .Phaser,.run_game,.bootstrap{
     /* border: solid 5px red; */
-    width: 400px;
+    width: 30%;
     height: 300px;
     border-radius: 50%;
-} 
+    cursor: pointer;
+    transition: 0.4s ease-in;
+}
+
+.Phaser:hover,.run_game:hover,.bootstrap:hover{
+    transform: scale(1.1);
+}
 
 /* Js classes */ 
 
@@ -582,4 +607,39 @@ input[type="submit"]:hover{
     padding: 1rem;
     font-size: 2em;
     border-radius: 50%;
+}
+
+.Discovers{
+    width: 50%;
+    padding: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Discovers img{
+    width: 100%;
+    animation: Rotate 20s linear infinite;
+}
+
+.Message{
+    width: 40%;
+    font-size: 2em;
+    color: var(--White);
+    font-family: var(--FontMont);
+    font-weight: 300;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.Message p{
+    text-align: start;
+}
+
+.nav_content{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
 }

@@ -57,9 +57,17 @@ const pointer = new THREE.Vector2();
 
 console.log(SCENE.children);
 
+// function onResize() {
+// 	CAMERA.aspect = window.innerWidth / window.innerHeight;
+// 	CAMERA.updateProjectionMatrix();
+// 	CAMERA.setSize(window.innerWidth, window.innerHeight);
+// }
+
 function animate(){
 	requestAnimationFrame(animate);
 	renderer.render(SCENE,CAMERA);
+
+	// window.addEventListener('resize', onResize, false);
 }
 
 animate();
