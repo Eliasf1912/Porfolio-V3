@@ -36,4 +36,31 @@ for( const needs of Form_need){
     needs.addEventListener("change",TurnNormal)
 }
 
-// -------- Api content --------- 
+// -------- Gsap --------- //
+
+gsap.registerPlugin(ScrollTrigger);
+
+const tl = gsap.timeline();
+
+tl.from(".title", {
+    opacity: 0,
+    x: -1000,
+    duration: 1,
+    scrollTrigger:{
+        trigger: ".About",
+        markers: true
+    }
+})
+.from(".About p", {
+    duration: 1,
+    delay: 1,
+    y: -100,
+    opacity: 0,
+    ease: "bounce",
+    scrollTrigger:{
+        trigger: ".title"
+    }
+})
+
+
+  
